@@ -1,0 +1,8 @@
+variable.tf
+variable "bucket_name" {
+    default = "shehbab-s3-bucket"
+    description = "Bucket for s3"
+}
+resource "aws_s3_bucket" "variable_s3_bucket" {
+  bucket = var.bucket_name
+}
