@@ -1,0 +1,12 @@
+modules
+-----variable.tf
+-----main.tf
+-----output.tf
+main.tf
+provider "aws" {
+  region = "us-west-2"
+}
+
+module "vpc_module" {
+   source = "./module/vpc_networking"
+}
