@@ -1,0 +1,13 @@
+variable.tf
+
+variable "bucket_name" {
+  decription = "Bucket name for S3"
+}
+
+resource "aws_s3_bucket" "variable_s3_bucket" {
+  bucket = var.bucket_name == "" ? "shehbab-s3-bucket" : var.bucket_name
+}
+
+resource "aws_s3_bucket" "variable_s3_bucket" {
+  bucket = "${var.bucket_name}"-shehbab"
+}
